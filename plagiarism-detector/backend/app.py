@@ -10,6 +10,7 @@ import docx
 import PyPDF2
 import textract
 import requests  # Untuk komunikasi dengan Ollama API
+import logging 
 
 app = Flask(__name__)
 CORS(app)
@@ -109,6 +110,9 @@ def analyze_with_ollama(text, source_text):
             }
         )
         
+        
+        print(response, flush=True)
+            
         if response.status_code != 200:
             return {
                 "analysis": f"Error: Ollama API returned status {response.status_code}",
