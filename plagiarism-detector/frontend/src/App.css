@@ -1,180 +1,158 @@
 /* ==== Global ==== */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f9;
-  color: #333;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
 }
 
 /* ==== Header ==== */
 header {
-  background: linear-gradient(90deg, #4e54c8, #8f94fb);
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* ==== Navigasi ==== */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-nav button {
   background: #ffffff;
-  border: 1px solid #ccc;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-
-nav button:hover {
-  background: #4e54c8;
-  color: white;
-  border-color: #4e54c8;
+  padding: 18px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 /* ==== Container utama ==== */
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #fff;
+  max-width: 950px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #ecfdf5, #dbeafe); /* hijau muda ke biru muda */
   border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   text-align: center;
 }
 
+
 /* ==== Judul ==== */
 h2 {
-  color: #4e54c8;
-  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111827;
 }
 
 p {
-  margin: 8px 0;
-  font-size: 16px;
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 20px;
 }
 
-strong {
-  color: #222;
-}
-
-/* ==== Form Input & Upload ==== */
+/* ==== Form Input ==== */
 textarea {
-  width: 80%;
-  height: 150px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-size: 14px;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  padding: 14px;
+  font-size: 15px;
   resize: vertical;
-  margin-top: 12px;
-  transition: 0.3s;
+  margin-top: 10px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
 }
 
 textarea:focus {
   outline: none;
-  border-color: #4e54c8;
-  box-shadow: 0px 0px 6px rgba(78, 84, 200, 0.5);
+  border-color: #22c55e;
+  box-shadow: 0 0 6px rgba(34,197,94,0.3);
 }
 
+/* ==== Upload ==== */
 input[type="file"] {
-  margin: 10px 0;
-  padding: 6px;
+  margin: 14px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px dashed #9ca3af;
+  border-radius: 8px;
+  background: #f9fafb;
+  cursor: pointer;
+  color: #374151;
 }
 
-/* ==== Detail ==== */
-.details {
-  margin-top: 25px;
-  text-align: left;
-}
-
-.details h3 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* ==== Tombol Aksi ==== */
+/* ==== Tombol utama ==== */
 .action-buttons {
-  margin-top: 20px;
+  margin-top: 22px;
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .action-buttons button {
-  padding: 10px 18px;
+  padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.25s ease-in-out;
 }
 
 .action-buttons button:first-child {
-  background: #4e54c8;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
   color: #fff;
 }
 
 .action-buttons button:first-child:hover {
-  background: #3b41a1;
+  background: linear-gradient(90deg, #16a34a, #15803d);
 }
 
 .action-buttons button:last-child {
-  background: #ff6b6b;
+  background: #ef4444;
   color: #fff;
 }
 
 .action-buttons button:last-child:hover {
-  background: #e63946;
+  background: #dc2626;
 }
 
-/* ==== Tabel ==== */
+/* ==== Hasil / Detail ==== */
+.details {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+/* ==== Tabel hasil ==== */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 16px;
-  text-align: left;
-  border-radius: 12px;
+  margin-top: 20px;
+  font-size: 15px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.04);
+  background: linear-gradient(135deg, #ffffff, #f0fdf4); /* putih ke hijau muda */
 }
 
 table thead {
-  background: linear-gradient(90deg, #4e54c8, #8f94fb);
-  color: white;
-  font-weight: bold;
+  background: #d1fae5; /* hijau pastel */
+  color: #065f46;
+  font-weight: 600;
 }
 
 table th, 
 table td {
-  padding: 12px 18px;
-  border-bottom: 1px solid #ddd;
-}
-
-table tbody tr {
-  background: #fff;
-  transition: background 0.3s ease;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 table tbody tr:nth-child(even) {
-  background: #f7f9fc;
+  background: #f0fdf4; /* hijau muda */
 }
 
 table tbody tr:hover {
-  background: #eef2ff;
-}
-
-table td:first-child {
-  font-weight: bold;
-  color: #333;
+  background: #dcfce7; /* efek hover hijau terang */
 }
